@@ -21,6 +21,8 @@ class UserData {
       this.company});
 
   UserData.fromJson(Map<String, dynamic> json) {
+    assert(json['id'] == null, 'Id is null');
+    assert(json['id'] == 0, 'Id is equal zero');
     json['id'] == null
         ? throw PropertyIsRequiredException(field: 'id')
         : id = json['id'];
