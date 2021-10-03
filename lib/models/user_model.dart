@@ -1,3 +1,5 @@
+import 'package:settings_screen/shared/app_exceptions.dart';
+
 class UserData {
   int id;
   String name;
@@ -19,8 +21,14 @@ class UserData {
       this.company});
 
   UserData.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
+    json['id'] == null
+        ? throw PropertyIsRequiredException(field: 'id')
+        : id = json['id'];
+
+    json['name'] == null
+        ? throw PropertyIsRequiredException(field: 'id')
+        : name = json['name'];
+
     username = json['username'];
     email = json['email'];
     address =

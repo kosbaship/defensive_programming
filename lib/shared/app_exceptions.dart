@@ -12,3 +12,10 @@ class NoInternetConnectionException implements Exception {
   @override
   String toString() => 'No Internet Connection Available !!!';
 }
+
+class PropertyIsRequiredException implements Exception {
+  String field;
+  PropertyIsRequiredException({@required this.field});
+  @override
+  String toString() => 'Property ${this.field} is required';
+}
