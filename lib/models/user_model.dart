@@ -22,6 +22,7 @@ class UserData {
 
   UserData.fromJson(Map<String, dynamic> json) {
     assert(json['id'], null);
+    assert(json['id'], 0);
     json['id'] == null
         ? throw PropertyIsRequiredException(field: 'id')
         : id = json['id'];
