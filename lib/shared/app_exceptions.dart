@@ -7,3 +7,8 @@ class ErrorNotFoundException implements Exception {
   @override
   String toString() => 'Resource ${this.message} Not Found';
 }
+
+class NoInternetConnectionException implements Exception {
+  @override
+  String toString() => 'No Internet Connection Available !!!';
+}

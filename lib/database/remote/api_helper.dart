@@ -8,10 +8,13 @@ import 'api_util.dart';
 
 class ApiHelper {
   static ApiHelper _instance = ApiHelper();
+
   static ApiHelper get getInstance => _instance;
 
   Future<List<UserData>> getUsers() async {
-    http.Response response = await http.get(ApiUtils.USERS_SERVICE);
+    await checkInternetConnection();
+
+    http.Response response = await http.get(USERS_SERVICE);
 
     switch (response.statusCode) {
       case 200:
