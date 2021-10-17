@@ -57,6 +57,7 @@ class HomeView extends StatelessWidget {
 
 class CustomUserCardItem extends StatelessWidget {
   final UserData userData;
+
   const CustomUserCardItem({@required this.userData});
 
   @override
@@ -71,12 +72,25 @@ class CustomUserCardItem extends StatelessWidget {
               child: Container(
                 color: Colors.red.withOpacity(0.3),
                 child: CircleAvatar(
-                  backgroundColor: Colors.white70,
+                  backgroundColor: Colors.white,
                   radius: 75,
                   child: CircleAvatar(
-                    backgroundColor: Colors.black54,
+                    backgroundColor: Colors.white,
                     radius: 65,
-                    child: Text("${userData.id}"),
+                    child: Image(
+                      image: NetworkImage(
+                        userData.id < 4 && userData.id >= 2
+                            ? 'https://avatars.githubusercontent.com/u/49769315?v=4'
+                            : 'https://thumbs.dreamstime.com/b/concept-open-magic-book-pages-water-land-small-child-fantasy-nature-learning-copy-space-166401875.jpg',
+                      ),
+                      loadingBuilder: (context, image, loadingProgress) {
+                        if (loadingProgress == null) return image;
+
+                        return Center(
+                          child: CircularProgressIndicator(),
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
