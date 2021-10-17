@@ -31,3 +31,25 @@
 [comment]: <> (وسيط بسمع لتغير وينبه للي بيسمع للتغير  )
 [comment]: <> (ممكن تستخدمه مع pageview dots )
 [comment]: <> ( شرحها بيبق قريب للدقيقه 17.38)
+
+[comment]: <> (================================================)
+
+[comment]: <> (shortcuts flutter android studio)
+[comment]: <> (CMD + P -> on the class name will show you what is the optional arguments )
+[comment]: <> (            that you can send)
+[comment]: <> (CMD + N -> generate getters and constructor)
+
+[comment]: <> (================================================)
+[comment]: <> (انا عندي كلاس اوثنتميشن بيستقبل انسان)
+[comment]: <> (والدوال اللي جواه بتاعه تسجيل الدخول والخروج بتعتمد علي الانسان)
+[comment]: <> (وعاوز اعمل داله انشاء حساب بتستقبل داتا بعيده عن كلاس الانسان)
+[comment]: <> (هنا اعمل داله الانشاء static لان مش هطر اني اعمل كلاس مصادقه لانه هيجبرني استقبل انسان)
+[comment]: <> (وبكدا استهدم داله الانشاء علي طول)
+
+[comment]: <> (================================================)
+
+[comment]: <> (اساسيات دارت 13)
+[comment]: <> (interface & payment & abstruction & controller )
+[comment]: <> ( شرحها بيبق قريب للدقيقه 28.25)
+
+[comment]: <> (================================================)
